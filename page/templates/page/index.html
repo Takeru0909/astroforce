@@ -1,0 +1,50 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@3.0.0/destyle.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  {% load static %}
+  <script src="{% static 'page/game.js' %}"></script>
+  <style>
+    canvas#myCanvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    select {
+      font-size: 100%;
+      border: #5760b3 5px inset;
+      background: #ffffff;
+      border-radius: 10px;
+      position: absolute;
+      z-index: 100;
+      top: 2%;
+      left: 80%;
+      width: 15%;
+      height: 7%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="image">
+    <img src="static/page/image/home.gif" width=100%; height=100%; />
+  </div>
+  <canvas id="myCanvas"></canvas>
+
+  <select name="game level" id="selectLevel">
+    <option value="easy">難易度: Easy</option>
+    <option value="normal">難易度: Normal</option>
+    <option value="hard">難易度: Hard</option>
+  </select>
+</body>
+
+</html>
